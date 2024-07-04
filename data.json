@@ -1,0 +1,17 @@
+{
+    "first-name": "John",
+    "last-name": "Doe",
+    "address": "123 Maple Street",
+    "city": "Springfield",
+    "province": "IL",
+    "postal-code": "62704",
+    "email": "john.doe@example.com",
+    "employment-income": 50000,
+    "pension-income": 10000,
+    "investment-income": 2000,
+    "other-income": 1500,
+    "rrsp-deduction": 5000,
+    "union-dues": 300,
+    "child-care-expenses": 1200,
+    "support-payments": 2000
+}

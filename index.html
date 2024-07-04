@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax and Benefit Return</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Income Tax and Benefit Return</h1>
+        
+        <!-- File Upload Section -->
+        <section>
+            <label for="json-upload">Upload JSON file to prefill form:</label>
+            <input type="file" id="json-upload" accept=".json">
+        </section>
+        
+        <!-- Form Section -->
+        <form id="tax-form">
+            <section>
+                <h2>Step 1 – Identification and other information</h2>
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" name="first-name">
+
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" name="last-name">
+
+                <label for="address">Mailing address:</label>
+                <input type="text" id="address" name="address">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+
+                <label for="province">Prov./Terr.:</label>
+                <input type="text" id="province" name="province">
+
+                <label for="postal-code">Postal code:</label>
+                <input type="text" id="postal-code" name="postal-code">
+
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email">
+            </section>
+            <section>
+                <h2>Step 2 – Total income</h2>
+                <label for="employment-income">Employment income:</label>
+                <input type="number" id="employment-income" name="employment-income">
+                
+                <label for="pension-income">Pension income:</label>
+                <input type="number" id="pension-income" name="pension-income">
+                
+                <label for="investment-income">Investment income:</label>
+                <input type="number" id="investment-income" name="investment-income">
+                
+                <label for="other-income">Other income:</label>
+                <input type="number" id="other-income" name="other-income">
+            </section>
+            <section>
+                <h2>Step 3 – Deductions</h2>
+                <label for="rrsp-deduction">RRSP deduction:</label>
+                <input type="number" id="rrsp-deduction" name="rrsp-deduction">
+                
+                <label for="union-dues">Union dues:</label>
+                <input type="number" id="union-dues" name="union-dues">
+                
+                <label for="child-care-expenses">Child care expenses:</label>
+                <input type="number" id="child-care-expenses" name="child-care-expenses">
+                
+                <label for="support-payments">Support payments made:</label>
+                <input type="number" id="support-payments" name="support-payments">
+            </section>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Summary Section -->
+        <div id="summary" style="display:none;">
+            <h2>Summary</h2>
+            <div id="summary-content"></div>
+            <button onclick="location.reload();">Edit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
