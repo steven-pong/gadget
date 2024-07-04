@@ -7,76 +7,98 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page">
+    <div class="container">
         <h1>Income Tax and Benefit Return</h1>
-        
+
         <!-- File Upload Section -->
-        <section>
-            <label for="json-upload">Upload JSON file to prefill form:</label>
-            <input type="file" id="json-upload" accept=".json">
+        <section class="upload-section">
+            <label for="json-upload" class="upload-label">Upload JSON file to prefill form:</label>
+            <input type="file" id="json-upload" accept=".json" class="upload-input">
         </section>
-        
+
         <!-- Form Section -->
         <form id="tax-form">
-            <section>
-                <h2>Step 1 – Identification and other information</h2>
-                <label for="first-name">First name:</label>
-                <input type="text" id="first-name" name="first-name">
-
-                <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" name="last-name">
-
-                <label for="address">Mailing address:</label>
-                <input type="text" id="address" name="address">
-
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city">
-
-                <label for="province">Prov./Terr.:</label>
-                <input type="text" id="province" name="province">
-
-                <label for="postal-code">Postal code:</label>
-                <input type="text" id="postal-code" name="postal-code">
-
-                <label for="email">Email address:</label>
-                <input type="email" id="email" name="email">
+            <section class="form-section">
+                <h2>Identification and other information</h2>
+                <div class="form-group">
+                    <label for="first-name">First name:</label>
+                    <input type="text" id="first-name" name="first-name"  required placeholder="Enter first name" value="John">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name:</label>
+                    <input type="text" id="last-name" name="last-name" required value="Smith">
+                </div>
+                <div class="form-group">
+                    <label for="sin">Social Insurance Number (SIN):</label>
+                    <input type="text" id="sin" name="sin" required value="000000000">
+                </div>
+                <div class="form-group">
+                    <label for="address">Mailing address:</label>
+                    <input type="text" id="address" name="address" required value="123 Generic Street">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required value="Montreal">
+                </div>
+                <div class="form-group">
+                    <label for="province">Prov./Terr.:</label>
+                    <input type="text" id="province" name="province" required value="QC">
+                </div>
+                <div class="form-group">
+                    <label for="postal-code">Postal code:</label>
+                    <input type="text" id="postal-code" name="postal-code" required value="H1H1H1">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" required value="john.smith@gmail.com">
+                </div>
             </section>
-            <section>
-                <h2>Step 2 – Total income</h2>
-                <label for="employment-income">Employment income:</label>
-                <input type="number" id="employment-income" name="employment-income">
-                
-                <label for="pension-income">Pension income:</label>
-                <input type="number" id="pension-income" name="pension-income">
-                
-                <label for="investment-income">Investment income:</label>
-                <input type="number" id="investment-income" name="investment-income">
-                
-                <label for="other-income">Other income:</label>
-                <input type="number" id="other-income" name="other-income">
+            <section class="form-section">
+                <h2>Total income</h2>
+                <div class="form-group">
+                    <label for="employment-income">Employment income:</label>
+                    <input type="number" id="employment-income" name="employment-income" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="pension-income">Pension income:</label>
+                    <input type="number" id="pension-income" name="pension-income" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="investment-income">Investment income:</label>
+                    <input type="number" id="investment-income" name="investment-income" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="other-income">Other income:</label>
+                    <input type="number" id="other-income" name="other-income" required value="0">
+                </div>
             </section>
-            <section>
-                <h2>Step 3 – Deductions</h2>
-                <label for="rrsp-deduction">RRSP deduction:</label>
-                <input type="number" id="rrsp-deduction" name="rrsp-deduction">
-                
-                <label for="union-dues">Union dues:</label>
-                <input type="number" id="union-dues" name="union-dues">
-                
-                <label for="child-care-expenses">Child care expenses:</label>
-                <input type="number" id="child-care-expenses" name="child-care-expenses">
-                
-                <label for="support-payments">Support payments made:</label>
-                <input type="number" id="support-payments" name="support-payments">
+            <section class="form-section">
+                <h2>Deductions</h2>
+                <div class="form-group">
+                    <label for="rrsp-deduction">RRSP deduction:</label>
+                    <input type="number" id="rrsp-deduction" name="rrsp-deduction" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="union-dues">Union dues:</label>
+                    <input type="number" id="union-dues" name="union-dues" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="child-care-expenses">Child care expenses:</label>
+                    <input type="number" id="child-care-expenses" name="child-care-expenses" required value="0">
+                </div>
+                <div class="form-group">
+                    <label for="support-payments">Support payments made:</label>
+                    <input type="number" id="support-payments" name="support-payments" required value="0">
+                </div>
             </section>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
         </form>
-        
+
         <!-- Summary Section -->
-        <div id="summary" style="display:none;">
+        <div id="summary">
             <h2>Summary</h2>
             <div id="summary-content"></div>
-            <button onclick="location.reload();">Edit</button>
+            <button onclick="location.reload();" class="edit-button">Edit</button>
         </div>
     </div>
     <script src="script.js"></script>
